@@ -1,0 +1,24 @@
+extends layout
+block content
+    .outerContainer
+        h1#title pokedex
+        .information
+            h2 Name: #{name}
+            h2 Id: ##{id}
+            #types
+                h2 Type:
+                for all in type
+                    p= all.name
+            h2 Description:
+            p= description
+            #abilities
+                h2 Abilities:
+                for all in abilities
+                    p= all.name
+        .buttons
+            form(method="get", action='/pokemon')
+                input(type="hidden", name="name", value=previousPokemon)
+                input(type="submit", value=previousPokemon)
+            form(method="get", action='/pokemon')
+                input(type="hidden", name="name", value=nextPokemon)
+                input(type="submit", value=nextPokemon)

@@ -1,0 +1,6 @@
+extends layout
+block content
+    h1 Enter a number below 710
+    form(name="search", action="/pokemon", method="get")
+        input(type="text", name="name")
+        input(type="submit", value="search")
