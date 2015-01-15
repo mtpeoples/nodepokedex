@@ -5,7 +5,7 @@ var fs = require('fs')
 
 var list = JSON.parse(fs.readFileSync('./list.json', 'utf8'));
 
-router.get('/search', function(req, res){
+router.get('/', function(req, res){
     res.render('search');
 })
 
